@@ -14,6 +14,8 @@ namespace Analysing_Log_data
     {
         private Alphabet _alphabet;
         private List<State> states = new List<State>();
+        private int _systemId;
+        private bool _isCheckSuccessfull;
 
         /// <summary>
         ///  You can login, go to options and the have 3 options (create, list of cars or logout) 
@@ -37,8 +39,15 @@ namespace Analysing_Log_data
         bool succesfully = false;
         public void start()
         {
+            _systemId += 1;
             var CurrentDate = DateTime.Now; 
-            Check();
+
+            Check(); //checking varriable
+            if(_isCheckSuccessfull == false)
+            {
+                return;
+            }
+
             if (_alphabet.getAlphabet()[0].ToString() == getInitialState())
             {
                 Console.WriteLine("ACTION: You're logged in                  " + CurrentDate);
@@ -113,6 +122,12 @@ namespace Analysing_Log_data
             {
                 Console.WriteLine("Variable is: " + statesStringList.Contains(item));
                 System.Threading.Thread.Sleep(200);
+                if (statesStringList.Contains(item) == false)
+                {
+                    _isCheckSuccessfull = false;
+                    Console.WriteLine("variables in alphabet is not valid, try with another alphabet...");
+                    return;
+                }
             }
             System.Threading.Thread.Sleep(1500);
             Console.Clear();

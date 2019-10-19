@@ -28,7 +28,7 @@ namespace Analysing_Log_data
 
             // This will succeed
             //
-            Alphabet alphabet = new Alphabet("login options create create list create create logout");
+            Alphabet alphabet = new Alphabet("login options create creates list create create logout");
             Automaton automaton = new Automaton(alphabet);
             automaton.start();
 
