@@ -10,10 +10,7 @@ namespace Analysing_Log_data
     {
         private string _name;
         private bool _isFinale;
-        public State()
-        {
-
-        }
+      
         public State(string name, bool isFinal)
         {
             _name = name;

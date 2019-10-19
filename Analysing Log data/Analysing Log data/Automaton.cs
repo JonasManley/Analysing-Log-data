@@ -23,40 +23,41 @@ namespace Analysing_Log_data
         }
 
         //logic 
+        private int numberTrue = 0;
         public void start()
         {
-            //foreach (var item in _alphabet.getAlphabet())
-
-            for (int i = 0; i < _alphabet.size(); i++)
+            //first you must login 
+            if (_alphabet.getAlphabet()[0].ToString() == getInitialState())
             {
-                if (_alphabet.getAlphabet()[i].ToString() == getInitialState())
+                Console.WriteLine("You're logged in");
+                if (_alphabet.getAlphabet()[1].ToString() == nextState(1).ToString())
                 {
-                    Console.WriteLine("You're logged in");
-
-                    if(_alphabet.getAlphabet()[i+1].ToString() == nextState(i + 1).ToString())
+                    Console.WriteLine("you've choose: options");
+                    if (_alphabet.getAlphabet()[2].ToString() == nextState(2).ToString() || _alphabet.getAlphabet()[2].ToString() == nextState(3).ToString())
                     {
-                        Console.WriteLine("going to option");
+                        if (_alphabet.getAlphabet()[2].ToString() == nextState(2).ToString())
+                        {
+                            Console.WriteLine("you've choose: logout");
+                        }
+                        if (_alphabet.getAlphabet()[2].ToString() == nextState(3).ToString())
+                        {
+                            Console.WriteLine("you've choose: create");
+                        }
                     }
-                    else
-                    {
-                        Console.WriteLine("Error");
-                    }
-                       
-                
-                    //more happens 
-                    //nextState
-
-                    } else { Console.WriteLine("Something went wrong");  }
-                
+                    else { Console.WriteLine("Third alphabet is not a acceptalbe state"); }
+                }
+                else { Console.WriteLine("Secound alphabet is not a acceptalbe state"); }
             }
+            else { Console.WriteLine("frist alphabet is not a acceptalbe state"); }
         }
 
+        //returns the alphabet (in form of a list)
         public string getAlphabet()
         {
             return _alphabet.ToString();
         }
 
-        //start state (givin the name)
+        //start state 
         public string getInitialState()
         {
             return states[0].ToString();
@@ -70,6 +71,14 @@ namespace Analysing_Log_data
         public State nextState(int index)
         {
             return states[index];
+        }
+
+        private bool Comparer(string x, string y)
+        {
+            if(x == y)
+            {
+                return true;
+            }return false;
         }
     }
 }
