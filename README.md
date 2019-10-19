@@ -23,8 +23,8 @@ of running instances (Use case scenarios). The automation should be able to
 monitor the following
 
 - is the action legal according to the present state.
- is any instance stuck at a non-final (non-accepting) state.
-• give a list of the running instances.
+- is any instance stuck at a non-final (non-accepting) state.
+- give a list of the running instances.
 
 <h3>2 Create a Finite State Generator</h3>
 Create an application that can create a Finite State Automaton to use in
@@ -33,10 +33,10 @@ actions (the alphabet) with max times as input.
 
 Example: A(B|C)*D
 
-A Login, 100
-B List items, 50
-C Edit item, 500
-D Logout, 200
+- A Login, 100
+- B List items, 50
+- C Edit item, 500
+- D Logout, 200
 
 
 Tips:
