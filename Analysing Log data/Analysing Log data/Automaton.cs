@@ -41,10 +41,10 @@ namespace Analysing_Log_data
             Check();
             if (_alphabet.getAlphabet()[0].ToString() == getInitialState())
             {
-                Console.WriteLine("ACTION: You're logged in");
+                Console.WriteLine("ACTION: You're logged in                  " + CurrentDate);
                 if (_alphabet.getAlphabet()[1].ToString() == nextState(1).ToString())
                 {
-                    Console.WriteLine("ACTION: you've choose: options");
+                    Console.WriteLine("ACTION: you've choose: options            " + CurrentDate);
 
                     for (int i = 2; i < _alphabet.getAlphabet().Count(); i++)
                     {
@@ -54,7 +54,7 @@ namespace Analysing_Log_data
                         {
                             if (_alphabet.getAlphabet()[i].ToString() == nextState(2).ToString())
                             {
-                                Console.WriteLine("ACTION: you've choose: logout");
+                                Console.WriteLine("ACTION: you've choose: logout            " + CurrentDate);
                                 Console.WriteLine("Automaton has ended");
                                 Console.WriteLine();
                                 Console.WriteLine("press enter to close");
@@ -64,21 +64,21 @@ namespace Analysing_Log_data
                             }
                             if (_alphabet.getAlphabet()[i].ToString() == nextState(3).ToString() && succesfully != true)
                             {
-                                Console.WriteLine("ACTION: you've choose: create");
+                                Console.WriteLine("ACTION: you've choose: create             " + CurrentDate);
                                 continue;
                             }
                             if (_alphabet.getAlphabet()[i].ToString() == nextState(4).ToString() && succesfully != true)
                             {
-                                Console.WriteLine("ACTION: you've choose: list --> list is returned");
+                                Console.WriteLine("ACTION: you've choose: list               " + CurrentDate);
                                 continue;
                             }
                         }
-                        else { Console.WriteLine("ERROR: Third alphabet is not a acceptalbe state"); Console.WriteLine("Automaton has ended"); return; }
+                        else { Console.WriteLine(); Console.WriteLine("ERROR: Third alphabet is not a acceptalbe state"); Console.WriteLine("Automaton has ended"); return; }
                     }
                 }
-                else { Console.WriteLine("ERROR: Secound alphabet is not a acceptalbe state"); Console.WriteLine("Automaton has ended"); return; }
+                else { Console.WriteLine(); Console.WriteLine("ERROR: Secound alphabet is not a acceptalbe state"); Console.WriteLine("Automaton has ended"); return; }
             }
-            else { Console.WriteLine("ERROR: frist alphabet is not a acceptalbe state"); Console.WriteLine("Automaton has ended"); return; }
+            else { Console.WriteLine(); Console.WriteLine("ERROR: frist alphabet is not a acceptalbe state"); Console.WriteLine("Automaton has ended"); return; }
         }
         
 
@@ -122,12 +122,13 @@ namespace Analysing_Log_data
             System.Threading.Thread.Sleep(1500);
         }
 
-        private bool Comparer(string x, string y)
-        {
-            if(x == y)
-            {
-                return true;
-            }return false;
-        }
+        
+        //private bool Comparer(string x, string y)
+        //{
+        //    if(x == y)
+        //    {
+        //        return true;
+        //    }return false;
+        //}
     }
 }
