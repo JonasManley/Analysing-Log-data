@@ -43,3 +43,12 @@ Tips:
 • use the regex-to-nfa.pdf and slides for inspiration.
 • template project can be found here:
 https://github.com/datsoftlyngby/soft2018fall-dm-teaching-material.git
+
+
+<h2>Project</h2>
+
+- Download the git repo and open it in visuel studio 2019
+- Explore the classes
+- Go to "main" and uncomment one or more of the outcommented sections
+- Run the program
+
