@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Analysing_Log_data
 {
+    /// <summary>
+    /// State is an action with the automaton 
+    /// </summary>
     class State : IState
     {
         private string _name;
