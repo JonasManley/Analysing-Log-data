@@ -45,10 +45,12 @@ Tips:
 https://github.com/datsoftlyngby/soft2018fall-dm-teaching-material.git
 
 
-<h2>Project</h2>
+<h2>Project insctructions</h2>
 
 - Download the git repo and open it in visuel studio 2019
 - Explore the classes
 - Go to "main" and uncomment one or more of the outcommented sections
 - Run the program
 
+<h2>Automanton implemented</h2>
+<img src="https://github.com/JonasManley/Analysing-Log-data/blob/master/Automaton.png" alt="UML" height="auto" width="auto" style="max-width:100%;">
